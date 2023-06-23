@@ -88,33 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</ul>
 	</div>
 <div>
-<?php echo "<h1>" . $title . "</h1>";?>
-	<table id="customers">
-		<tr>
-			<th>Nama</th>
-			<th>Email</th>
-			<th>Nomor Telpon</th>
-			<th></th>
-		</tr>
-		<?php
-$cacah=1;
-		echo "<a href='createForm'><button>Create</button></a>";
-		foreach ($data as $data){
-		?>
-		<tr>
-			<td><?= $cacah ?> </td>
-			<td><?= $data->nama ?> </td>
-			<td><?= $data->email?> </td> 
-			<td><?= $data->nohp ?> </td> 
-			<td>
-			<a href="<?php echo base_url('/index.php/C_Pesan/updateForm/'). $data->user_id ?>"><button>Update</button></a>
-			<a href="<?php echo site_url('C_Pesan/delete/'). $data->user_id ?>"><button>Delete</button></a>
-			</td>
-		</tr>
-		<?php
-			$cacah++;
-		}	
-		?>
+
 	</table>
 </div>
 </div>

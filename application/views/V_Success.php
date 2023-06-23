@@ -56,7 +56,33 @@
                 </div>
             </div>
         </section>
-
+        <?php echo "<h1>" . $title . "</h1>";?>
+	<table id="customers">
+		<tr>
+			<th>Nama</th>
+			<th>Email</th>
+			<th>Nomor Telpon</th>
+			<th></th>
+		</tr>
+		<?php
+$cacah=1;
+		echo "<a href='createForm'><button>Create</button></a>";
+		foreach ($data as $data){
+		?>
+		<tr>
+			<td><?= $cacah ?> </td>
+			<td><?= $data->nama ?> </td>
+			<td><?= $data->email?> </td> 
+			<td><?= $data->nohp ?> </td> 
+			<td>
+			<a href="<?php echo base_url('/index.php/C_Pesan/updateForm/'). $data->user_id ?>"><button>Update</button></a>
+			<a href="<?php echo site_url('C_Pesan/delete/'). $data->user_id ?>"><button>Delete</button></a>
+			</td>
+		</tr>
+		<?php
+			$cacah++;
+		}	
+		?>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         

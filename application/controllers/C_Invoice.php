@@ -16,7 +16,7 @@ class C_Invoice extends CI_Controller
         $nama = $this->input->post('nama');
 		$notelp = $this->input->post('notelp');
 		$email = $this->input->post('email');
-        $amount = $this -> input -> post ('amout');
+        $tagihan = $this -> input -> post ('tagihan');
 		$createaction = array(
 			'nama' => $nama,
 			'notelp' => $notelp,
