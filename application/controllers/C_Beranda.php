@@ -5,12 +5,12 @@ class C_Beranda extends CI_Controller {
 
 	public function gotoHome()
 	{
-		$this->load->view('V_Beranda');
+		$this->load->view('V_home');
 	}
 	
 	public function FAQ()
 	{
-		$this->load->view('V_FAQ');
+		$this->load->view('V_faq');
 	}
     public function Game()
     {

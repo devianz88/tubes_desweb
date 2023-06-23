@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -17,13 +19,13 @@
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item ms-2">
-                                <a class="nav-link" aria-current="page" href="V_home.html">Home</a>
+                                <a href="<?php echo site_url ('C_Beranda/gotoHome'); ?>" class="nav-link" aria-current="page" href="V_home.html">Home</a>
                             </li>
                             <li class="nav-item ms-2">
-                                <a class="nav-link" href="V_home.html#tentangkita">About Us</a>
+                                <a href="<?php echo site_url ('C_Beranda/gotoHome'); ?>" class="nav-link" href="V_home.html#tentangkita">About Us</a>
                             </li>
                             <li class="nav-item ms-2">
-                                <a class="nav-link" href="V_faq.html">FAQ</a>
+                                <a href="<?php echo site_url ('C_Beranda/FAQ'); ?>" class="nav-link" href="V_faq.html">FAQ</a>
                             </li>
                         </ul>
                         <a class="btn btn-primary ml-auto" href="V_contact.html" role="button">Contact Us</a>
